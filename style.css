@@ -1,0 +1,262 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Volkhov:ital,wght@0,400;0,700;1,400&display=swap');
+
+
+/*RESET*/
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Volkhov', Georgia, serif;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    border-radius: 5px;
+}
+
+/*     GRID Geral     */
+
+.estrutura{
+    display: grid;
+    grid-template-columns: minmax(160px, 1fr) 3fr 300px;
+    grid-template-areas: "header header header"
+                          "sidenav content anuncios"
+                          "footer footer footer";
+}
+
+
+/*header*/
+.header{
+    background: linear-gradient(135deg, #8844ee, #b07dfb);
+    padding: 30px 20px 30px 10px;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-area: header;
+    align-items: center;
+}
+
+.logo{
+    max-width: 200px;
+}
+
+.header nav ul{
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+}
+
+.header nav a{
+    color: #fff;
+    font-size: 1.125em;
+    background-color: rgba(0,0,0,.1);
+    border-radius: 7px;
+    padding: 10px 15px;
+    transition: all .3s;
+}
+
+.header nav a:hover {
+    background-color: rgba(0,0,0,.3);
+}
+
+/*sidenav*/
+.sidenav{
+    background-color: rgba(238, 238, 238, .3);
+    padding: 30px;
+    grid-area: sidenav;
+}
+
+.sidenav li a{
+    display: block;
+    min-width: 60px;
+    max-width: 100px;
+    margin: 0 auto 30px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 5px 5px 15px 0px rgba(44,44,44,.15);
+    transition: all .3s;
+}
+
+.sidenav li a:hover{
+    background-color: rgba(176, 125, 251);
+    box-shadow: 5px 5px 15px 0px rgba(44,44,44,.3);
+}
+
+.sidenav img{
+    transition: all .4s;
+}
+
+.sidenav img:hover{
+    scale: 1.05;
+}
+
+/*content*/
+.content{
+    grid-area: content;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 30px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+
+/*titulo*/
+.titulo{
+    color: #b07dfb;
+}
+
+.titulo h1{
+    font-size: 3.75em;
+    line-height: 1;
+    font-weight: 700;
+}
+
+.titulo span{
+    font-size: 0.875em;
+    font-style: italic;
+}
+
+/*caracteristicas*/
+.caracteristicas{
+    display: flex;
+    align-items: flex-start;
+}
+
+.caracteristicas > div {
+    width: 80px;
+    text-align: center;
+    background: linear-gradient(135deg, #8844ee, #b07dfb);
+    border-radius: 5px;
+    box-shadow: 5px 5px 15px 0px rgba(44,44,44,.15);
+}
+
+.caracteristicas > div:first-child{
+    margin-right: 30px;
+}
+
+.caracteristicas span{
+    display: block;
+    color: rgb(167, 124, 232);
+}
+
+.numero{
+    font-size: 3em;
+    line-height: 1;
+    margin: 10px auto;
+}
+
+.rotulo{
+    background-color: #fff;
+    border-radius: 0 0 5px 5px;
+    padding: 5px 0; 
+}
+
+.col-wide{
+    grid-column: 1/-1;
+}
+
+.imagem-1{
+    grid-row: span 2;
+    align-self: flex-end;
+}
+
+.imagem-2{
+    align-self: flex-end;
+}
+
+/*estilos paragrafos do content*/
+p{
+    font-size: 1.2em;
+    line-height: 1.6;
+    letter-spacing: -0.005em;
+    color: rgba(0,0,0,.7);
+}
+
+.informacoes{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.destaque{
+    font-size: 0.875em;
+    color: #b07dfb;
+    max-width: 20em;
+}
+
+.citacao, .atributos{
+    align-self: start;
+    padding: 30px;
+    border-radius: 5px;
+    box-shadow: 5px 5px 15px 0px rgba(44,44,44,.15);
+    background: linear-gradient(135deg, #8844ee, #b07dfb);
+}
+
+.citacao p{
+    color: #fff;
+    font-size: 1.5em;
+    font-style: italic;
+    text-align: center;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.citacao cite{
+    display: flex;
+    justify-content: flex-end;
+    color: #fff;
+}
+
+.citacao cite::before{
+    content: "";
+    border-bottom: 2px solid rgba(255, 255, 255, 0.707);
+    width: 14px;
+    height: 10px;
+    margin-right: 4px;
+}
+
+.atributos li{
+    color: #fff;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1.125em;
+    font-weight: bold;
+    padding: 15px;
+}
+
+.atributos li + li{
+    border-top: 1px solid #b07dfb;
+}
+
+/*anuncios*/
+.anuncios{
+    grid-area: anuncios;
+    background-color: #fafbfc;
+    display: grid;
+    align-content: flex-start;
+    padding: 30px;
+    gap: 30px;
+}
+
+/*footer*/
+.footer{
+    grid-area: footer;
+    background: linear-gradient(135deg, #8844ee, #b07dfb);
+}
+
+.footer p{
+    padding: 30px;
+    text-align: center;
+    color: #fff;
+}
