@@ -1,9 +1,4 @@
-@charset "UTF-8";
-
 @import url('https://fonts.googleapis.com/css2?family=Volkhov:ital,wght@0,400;0,700;1,400&display=swap');
-
-
-/*RESET*/
 
 * {
     padding: 0;
@@ -25,8 +20,6 @@ img {
     border-radius: 5px;
 }
 
-/*     GRID Geral     */
-
 .estrutura{
     display: grid;
     grid-template-columns: minmax(160px, 1fr) 3fr 300px;
@@ -35,8 +28,6 @@ img {
                           "footer footer footer";
 }
 
-
-/*header*/
 .header{
     background: linear-gradient(135deg, #8844ee, #b07dfb);
     padding: 30px 20px 30px 10px;
@@ -69,7 +60,6 @@ img {
     background-color: rgba(0,0,0,.3);
 }
 
-/*sidenav*/
 .sidenav{
     background-color: rgba(238, 238, 238, .3);
     padding: 30px;
@@ -101,7 +91,6 @@ img {
     scale: 1.05;
 }
 
-/*content*/
 .content{
     grid-area: content;
     max-width: 900px;
@@ -112,7 +101,6 @@ img {
     gap: 30px;
 }
 
-/*titulo*/
 .titulo{
     color: #b07dfb;
 }
@@ -128,7 +116,6 @@ img {
     font-style: italic;
 }
 
-/*caracteristicas*/
 .caracteristicas{
     display: flex;
     align-items: flex-start;
@@ -176,7 +163,6 @@ img {
     align-self: flex-end;
 }
 
-/*estilos paragrafos do content*/
 p{
     font-size: 1.2em;
     line-height: 1.6;
@@ -239,7 +225,6 @@ p{
     border-top: 1px solid #b07dfb;
 }
 
-/*anuncios*/
 .anuncios{
     grid-area: anuncios;
     background-color: #fafbfc;
@@ -249,7 +234,6 @@ p{
     gap: 30px;
 }
 
-/*footer*/
 .footer{
     grid-area: footer;
     background: linear-gradient(135deg, #8844ee, #b07dfb);
